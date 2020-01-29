@@ -11,6 +11,7 @@ import {Text} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import theme from './themes';
 import Home from './views/screens/Home';
