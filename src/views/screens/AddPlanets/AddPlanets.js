@@ -30,7 +30,7 @@ class AddPlanets extends Component {
         alert('title: ' + title + ' content: ' + content);
     };
 
-    renderBlogForm = () => {
+    renderPlanetForm = () => {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>
@@ -66,7 +66,7 @@ class AddPlanets extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                {this.renderBlogForm()}
+                {this.renderPlanetForm()}
             </View>
         );
     }

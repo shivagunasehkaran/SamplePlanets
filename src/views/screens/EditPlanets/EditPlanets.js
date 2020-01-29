@@ -30,7 +30,7 @@ class EditPlanets extends Component {
         alert('title: ' + title + ' content: ' + content);
     };
 
-    renderBlogEditForm = () => {
+    renderPlanetEditForm = () => {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>
@@ -66,7 +66,7 @@ class EditPlanets extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                {this.renderBlogEditForm()}
+                {this.renderPlanetEditForm()}
             </View>
         );
     }

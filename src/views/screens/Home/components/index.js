@@ -1,2 +1,2 @@
-export {default} from './BlogsItem';
+export {default} from './PlanetListItem';
 export {default} from './ServiceComponent';

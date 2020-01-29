@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, ActivityIndicator, FlatList} from 'react-native';
 import {Icon} from 'react-native-vector-icons';
-import BlogsItem from './BlogsItem';
+import PlanetListItem from './PlanetListItem';
 import theme from '../../../../themes';
 
 export default class ServiceComponent extends Component {
@@ -50,7 +50,7 @@ export default class ServiceComponent extends Component {
                 <FlatList
                     data={this.state.dataSource}
                     ItemSeparatorComponent={this.FlatListItemSeparator}
-                    renderItem={({item}) => <BlogsItem itemTitle={item.name}/>}
+                    renderItem={({item}) => <PlanetListItem itemTitle={item.name}/>}
                     keyExtractor={this._keyExtractor}
                 />
             </View>

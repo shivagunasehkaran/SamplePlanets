@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Home extends Component {
     static navigationOptions = ({navigation}) => ({
-        title: ('Breweries list'),
+        title: ('Planets list'),
         headerStyle: {
             backgroundColor: theme.colors.buttonColor,
         },

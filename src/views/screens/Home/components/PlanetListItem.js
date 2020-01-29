@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PropTypes from 'prop-types';
 
-class BlogsItem extends Component {
+class PlanetListItem extends Component {
     static propTypes = {
         onPress: PropTypes.func,
     };
@@ -19,7 +19,7 @@ class BlogsItem extends Component {
     }
 }
 
-export default BlogsItem;
+export default PlanetListItem;
 
 const styles = StyleSheet.create({
     item: {
