@@ -21,7 +21,7 @@ export default class ServiceComponent extends Component {
         if (nextProps.data != null) {
             this.setState({
                 loading: false,
-                dataSource: nextProps.data,
+                dataSource: nextProps.data.results,
             });
         }
     }
@@ -51,7 +51,7 @@ export default class ServiceComponent extends Component {
                     data={this.state.dataSource}
                     ItemSeparatorComponent={this.FlatListItemSeparator}
                     renderItem={({item}) => <BlogsItem itemTitle={item.name}/>}
-                    keyExtractor={item => item.id.toString()}
+                    keyExtractor={this._keyExtractor}
                 />
             </View>
         );
