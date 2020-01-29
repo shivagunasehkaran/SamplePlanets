@@ -11,9 +11,11 @@ class Home extends Component {
         headerStyle: {
             backgroundColor: theme.colors.buttonColor,
         },
-        headerRight: () => <Icon style={{paddingRight: 15, color: theme.colors.black}}
-                                 name="plus"
-                                 size={20}/>,
+        headerRight: (
+            <Icon style={{paddingRight: 15, color: theme.colors.black}}
+                  name="plus"
+                  size={20}/>
+        ),
     });
 
     render() {
