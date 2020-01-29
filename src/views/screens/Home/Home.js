@@ -13,6 +13,7 @@ class Home extends Component {
         },
         headerRight: (
             <Icon style={{paddingRight: 15, color: theme.colors.black}}
+                  onPress={() => navigation.navigate('AddPlanets')}
                   name="plus"
                   size={20}/>
         ),

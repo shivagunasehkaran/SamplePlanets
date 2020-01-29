@@ -15,6 +15,9 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import theme from './themes';
 import Home from './views/screens/Home';
+import ShowPlanets from './views/screens/ShowPlanets';
+import AddPlanets from './views/screens/AddPlanets';
+import EditPlanets from './views/screens/EditPlanets';
 
 const HomeScreen = createStackNavigator({
     Home: {
@@ -24,19 +27,19 @@ const HomeScreen = createStackNavigator({
 
 const ShowPlanetScreen = createStackNavigator({
     ShowPlanet: {
-        screen: Home,
+        screen: ShowPlanets,
     },
 });
 
 const AddPlanetScreen = createStackNavigator({
     AddPlanet: {
-        screen: Home,
+        screen: AddPlanets,
     },
 });
 
 const EditPlanetScreen = createStackNavigator({
     EditPlanet: {
-        screen: Home,
+        screen: EditPlanets,
     },
 });
 

@@ -34,7 +34,7 @@ class EditPlanets extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>
-                    {('Enter new Planet')}
+                    {('Enter Planet')}
                 </Text>
                 <TextInput style={styles.input}
                            underlineColorAndroid="transparent"
@@ -43,7 +43,7 @@ class EditPlanets extends Component {
                            autoCapitalize="none"
                            onChangeText={this.handleTitle}/>
                 <Text style={styles.title}>
-                    {('Enter new planet details')}
+                    {('Enter planet details')}
                 </Text>
                 <TextInput style={styles.input}
                            underlineColorAndroid="transparent"

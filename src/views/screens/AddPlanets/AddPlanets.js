@@ -4,7 +4,7 @@ import theme from '../../../themes';
 
 class AddPlanets extends Component {
     static navigationOptions = ({navigation}) => ({
-        title: ('Add Planets'),
+        title: ('Add Planet'),
         headerStyle: {
             backgroundColor: theme.colors.buttonColor,
         },
@@ -34,7 +34,7 @@ class AddPlanets extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>
-                    {('Enter Planets')}
+                    {('Enter Planet')}
                 </Text>
                 <TextInput style={styles.input}
                            underlineColorAndroid="transparent"
