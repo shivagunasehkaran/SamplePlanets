@@ -1,17 +1,26 @@
 import React, {Component} from 'react';
+import {Provider} from 'react-redux';
+import store from './Reducers/Index';
+import ServiceCallAction from './Actions/ServiceCallAction';
 import theme from '../../../themes';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Home extends Component {
     static navigationOptions = ({navigation}) => ({
-        title: ('Planets list'),
+        title: ('Breweries list'),
         headerStyle: {
             backgroundColor: theme.colors.buttonColor,
         },
+        headerRight: () => <Icon style={{paddingRight: 15, color: theme.colors.black}}
+                                 name="plus"
+                                 size={20}/>,
     });
 
     render() {
         return (
-            <View></View>
+            <Provider store={store}>
+                <ServiceCallAction/>
+            </Provider>
         );
     }
 }
