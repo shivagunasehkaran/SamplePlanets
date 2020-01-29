@@ -4,7 +4,7 @@ import {Icon} from 'react-native-vector-icons';
 import PlanetListItem from './PlanetListItem';
 import theme from '../../../../themes';
 
-export default class ServiceComponent extends Component {
+class ServiceComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -37,6 +37,12 @@ export default class ServiceComponent extends Component {
         );
     };
 
+    handlePressPlanetDetails = (data) => {
+        this.props.navigation.navigate('ShowPlanet', {
+            planetItems: data,
+        });
+    };
+
     render() {
         if (this.state.loading) {
             return (
@@ -50,8 +56,11 @@ export default class ServiceComponent extends Component {
                 <FlatList
                     data={this.state.dataSource}
                     ItemSeparatorComponent={this.FlatListItemSeparator}
-                    renderItem={({item}) => <PlanetListItem itemTitle={item.name}/>}
-                    keyExtractor={this._keyExtractor}
+                    renderItem={({item}) =>
+                        <PlanetListItem navigation={this.props.navigation}
+                                        itemTitle={item.name}
+                                        onPressButton={() => this.handlePressPlanetDetails(item)}/>}
+                    keyExtractor={item => item.toString()}
                 />
             </View>
         );
@@ -80,7 +89,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: '#000000',
     },
-
     centering: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -88,3 +96,5 @@ const styles = StyleSheet.create({
 
     },
 });
+
+export default ServiceComponent;

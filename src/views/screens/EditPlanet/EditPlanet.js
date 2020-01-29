@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native';
 import theme from '../../../themes';
 
-class EditPlanets extends Component {
+class EditPlanet extends Component {
     static navigationOptions = ({navigation}) => ({
         title: ('Edit planets'),
         headerStyle: {
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default EditPlanets;
+export default EditPlanet;

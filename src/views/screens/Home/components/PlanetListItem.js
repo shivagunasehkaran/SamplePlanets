@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PropTypes from 'prop-types';
+import {withNavigation} from 'react-navigation';
 
 class PlanetListItem extends Component {
     static propTypes = {
@@ -8,9 +9,9 @@ class PlanetListItem extends Component {
     };
 
     render() {
-        const {itemTitle} = this.props;
+        const {itemTitle, onPressButton} = this.props;
         return (
-            <TouchableOpacity onPress={this.props.onPress}>
+            <TouchableOpacity onPress={onPressButton}>
                 <View style={styles.item}>
                     <Text style={styles.title}>{itemTitle}</Text>
                 </View>
@@ -19,7 +20,7 @@ class PlanetListItem extends Component {
     }
 }
 
-export default PlanetListItem;
+export default withNavigation(PlanetListItem);
 
 const styles = StyleSheet.create({
     item: {

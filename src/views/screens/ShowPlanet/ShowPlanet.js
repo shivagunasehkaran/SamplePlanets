@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import theme from '../../../themes';
 
-class ShowPlanets extends Component {
+class ShowPlanet extends Component {
     static navigationOptions = ({navigation}) => ({
         title: ('Planets details'),
         headerStyle: {
@@ -21,14 +21,29 @@ class ShowPlanets extends Component {
     }
 
     render() {
+        const {navigation} = this.props;
+        const planetItems = navigation.getParam('planetItems');
+
         return (
             <View style={{flex: 1}}>
                 <View style={styles.container}>
                     <Text style={styles.title}>
-                        {('Planets title')}
+                        {planetItems.name}
                     </Text>
                     <Text style={styles.content}>
-                        {('My Planets post today is all about xyz.')}
+                        {planetItems.terrain}
+                    </Text>
+                    <Text style={styles.content}>
+                        {planetItems.population}
+                    </Text>
+                    <Text style={styles.content}>
+                        {planetItems.surface_water}
+                    </Text>
+                    <Text style={styles.content}>
+                        {planetItems.gravity}
+                    </Text>
+                    <Text style={styles.content}>
+                        {planetItems.climate}
                     </Text>
                 </View>
             </View>
@@ -62,4 +77,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ShowPlanets;
+export default ShowPlanet;

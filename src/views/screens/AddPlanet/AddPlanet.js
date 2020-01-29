@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 import theme from '../../../themes';
 
-class AddPlanets extends Component {
+class AddPlanet extends Component {
     static navigationOptions = ({navigation}) => ({
         title: ('Add Planet'),
         headerStyle: {
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AddPlanets;
+export default AddPlanet;
